@@ -15,8 +15,8 @@ const posts = (await getCollection("blog")).sort(
         <li class="flex flex-col">
           <a href={`/blog/${post.slug}/`} class="flex flex-col items-start">
             <img
-              width={720}
-              height={360}
+              width={480}
+              height={240}
               src={post.data.heroImage}
               alt={post.data.title}
               class="w-full h-auto"
