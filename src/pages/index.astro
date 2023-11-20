@@ -1,20 +1,51 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 ---
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body>
-		<Header title={SITE_TITLE} />
-		<main>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
-			<p>
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body>
+    <Header title={SITE_TITLE} />
+    <main>
+      <section class="flex items-center py-12">
+        <div
+          class="w-full absolute z-20 inset-0 md:relative md:w-1/2 text-center flex flex-col justify-center hero-caption"
+        >
+          <h1 class="text-3xl md:text-5xl leading-tight font-semibold">
+            The Room <br class="" />
+             You've Dreaming
+          </h1>
+          <h2 class="px-8 text-base md:px-0 md:text-lg my-6 tracking-wide">
+            Kami menyediakan furniture berkelas yang
+            <br class="hidden lg:block" />
+             membuat ruangan terasa homey
+          </h2>
+          <div>
+            <button
+              class="bg-gray-900 hover:bg-gray-800 text-white text-lg underline font-light py-0 px-9 border border-gray-300 rounded-lg shadow-sm"
+            >
+              Download CV
+            </button>
+          </div>
+        </div>
+        <div class="w-full inset-0 px-12 md:relative md:w-1/2">
+          <img
+            src={"https://images.squarespace-cdn.com/content/v1/6368fd66cb727f1d5a2d927c/3ac493f6-5bc0-4b71-99ed-a6dc34444bc1/A_1.123.1.jpg?format=750w"}
+            alt="hero 1"
+            class="absolute inset-0 md:relative w-full h-full object-cover object-center"
+          />
+        </div>
+      </section>
+    </main>
+
+    <!-- <h1>🧑‍🚀 Hello, Astronaut!</h1> -->
+    <!-- <p>
 				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This
 				template serves as a lightweight, minimally-styled starting point for anyone looking to
 				build a personal website, blog, or portfolio with Astro.
@@ -43,8 +74,8 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 					href="https://github.com/Charca/astro-blog-template"
 					>astro-blog-template
 				</a> by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
-		</main>
-		<Footer />
-	</body>
+			</p> -->
+
+    <Footer />
+  </body>
 </html>
