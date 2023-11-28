@@ -1,10 +1,12 @@
-<section class="flex items-center justify-between gap-10 p-12">
+<section
+  class="flex flex-col items-center justify-center px-12 gap-10 p-1 lg:flex-row lg:justify-between mb-8 md:mb-[80px]"
+>
   <div
-    class="lg:flex-grow-1 w-1/2 flex flex-col lg:items-start text-center lg:text-left items-center"
+    class="w-full lg:w-1/2 flex flex-col items-center lg:items-start text-center lg:gap-4 md:gap-6 lg:text-left"
   >
     <h2 class="text-xl">🧑‍🚀 Hello, I am Farrel Muhammad</h2>
     <h1 class="text-4xl md:text-5xl lg:text-6xl font-semibold">
-        <span class="font-thin">Front-End</span>
+      <span class="font-thin">Front-End</span>
       <br />
        Developer.
     </h1>
@@ -13,22 +15,25 @@
       track record of collaborating effectively with a great user experience.
     </p>
     <div
-      class="flex flex-col md:flex-row items-center mx-auto lg:mx-0 gap-3 justify-center mt-3"
+      class="flex flex-col lg:flex-row items-center mx-auto lg:mx-0 gap-3 justify-center mt-3"
     >
       <a href="/test" class="text-white text-decoration-none">
         <button
-          class="bg-gray-900 hover:bg-gray-800 text-white text-xl font-bold underline py-1 px-9 border border-gray-300 rounded-lg shadow-sm"
+          class="bg-gray-900 hover:underline text-white text-xl font-bold py-1 px-9 border border-gray-300 rounded-lg shadow-sm"
         >
           Download CV
         </button>
       </a>
     </div>
   </div>
-  <div class="w-1/2 flex justify-items-center md:relative md:w-1/2">
-    <img
-      src={"https://images.squarespace-cdn.com/content/v1/6368fd66cb727f1d5a2d927c/3ac493f6-5bc0-4b71-99ed-a6dc34444bc1/A_1.123.1.jpg?format=750w"}
-      alt="hero 1"
-      class="w-full h-full object-cover object-center"
-    />
+  <div class="w-48 h-48 md:w-96 md:h-96 relative rounded-sm gap-5">
+    <div
+      class="w-48 h-48 left-[-20px] top-[20px] md:w-96 md:h-96 md:left-[30px] md:top-[20px] absolute shadow-xl rounded-sm border-4 border-black"
+    >
+    </div>
+    <img class="absolute shadow-md object-cover" src="/photo.png" />
   </div>
+  <!-- <div class="w-full lg:w-1/2 mt-6 lg:mt-0">
+    <img src="https://images.squarespace-cdn.com/content/v1/6368fd66cb727f1d5a2d927c/3ac493f6-5bc0-4b71-99ed-a6dc34444bc1/A_1.123.1.jpg?format=750w" alt="hero 1" class="w-full h-full object-cover object-center" />
+  </div> -->
 </section>

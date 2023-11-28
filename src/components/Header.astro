@@ -3,64 +3,94 @@ import HeaderLink from "./HeaderLink.astro";
 import { SITE_TITLE } from "../consts";
 ---
 
-<header class="bg-white shadow-md p-4">
-  <nav class="flex items-center justify-between px-[120px]">
-    <h2 class="m-0 text-lg font-bold">
-      <a href="/" class="text-black">{SITE_TITLE}</a>
-    </h2>
-    <div class="flex justify-items-center space-x-4">
-      <HeaderLink href="/" class="nav-link">Home</HeaderLink>
-      <HeaderLink href="/blog" class="nav-link">Blog</HeaderLink>
-      <HeaderLink href="/about" class="nav-link">About</HeaderLink>
+<header class="bg-white shadow-md py-4">
+  <nav class="flex items-center justify-between px-[90px]">
+    <div class="flex items-start justify-items-start w-[120px]">
+      <h1 class="text-2xl font-bold">
+        <a href="/" class="text-black">{SITE_TITLE}</a>
+      </h1>
     </div>
-    <div class="flex justify-items-end space-x-2">
+
+    <!-- Hamburger -->
+    <div class="md:hidden">
+      <button id="mobile-menu-toggle" class="focus:outline-none">
+        <svg
+          class="h-8 w-8 fill-current text-black"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M3 5h18a1 1 0 010 2H3a1 1 0 010-2zm0 7h18a1 1 0 010 2H3a1 1 0 010-2zm0 7h18a1 1 0 010 2H3a1 1 0 010-2z"
+            clip-rule="evenodd"></path>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="md:hidden fixed inset-0 bg-white z-50 hidden">
+      <div class="flex flex-col items-center justify-center h-full">
+        <button
+        id="close-mobile-menu"
+        class="absolute top-4 right-4 text-gray-700 hover:text-black focus:outline-none"
+      >
+        <!-- Icon Close -->
+        <svg
+          class="h-6 w-6"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M6 18L18 6M6 6l12 12"
+          />
+        </svg>
+      </button>
+        <HeaderLink
+          href="/"
+          class="text-lg font-semibold text-black hover:underline py-2"
+        >
+          Home
+        </HeaderLink>
+        <HeaderLink
+          href="/blog"
+          class="text-lg font-semibold text-black hover:underline py-2"
+        >
+          Blog
+        </HeaderLink>
+        <HeaderLink
+          href="/about"
+          class="text-lg font-semibold text-black hover:underline py-2"
+        >
+          Projects
+        </HeaderLink>
+        <button
+          class="bg-gray-900 text-white text-lg font-light py-2 px-6 border border-gray-300 rounded-lg shadow-sm mt-4"
+        >
+          Say Hello!
+        </button>
+      </div>
+    </div>
+
+    <!-- Desktop Menu -->
+    <div class="hidden md:flex justify-items-center space-x-4">
+      <HeaderLink href="/" class="nav-link hover:underline">Home</HeaderLink>
+      <HeaderLink href="/blog" class="nav-link hover:underline">
+        Blog
+      </HeaderLink>
+      <HeaderLink href="/about" class="nav-link hover:underline">
+        Projects
+      </HeaderLink>
+    </div>
+    <div class="hidden md:flex justify-items-end space-x-1">
       <button
-        class="bg-gray-900 hover:bg-gray-800 text-white text-lg underline font-light py-0 px-9 border border-gray-300 rounded-lg shadow-sm"
+        class="bg-gray-900 hover:underline text-white text-lg font-light py-0 px-9 border border-gray-300 rounded-lg shadow-sm"
       >
         Say Hello!
       </button>
     </div>
   </nav>
 </header>
-
-<!-- <style>
-	header {
-		margin: 0;
-		padding: 0 1em;
-		background: white;
-		box-shadow: 0 2px 8px rgba(var(--black), 5%);
-	}
-	h2 {
-		margin: 0;
-		font-size: 1em;
-	}
-
-	h2 a,
-	h2 a.active {
-		text-decoration: none;
-	}
-	nav {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-	}
-	nav a {
-		padding: 1em 0.5em;
-		color: var(--black);
-		border-bottom: 4px solid transparent;
-		text-decoration: none;
-	}
-	nav a.active {
-		text-decoration: none;
-		border-bottom-color: var(--accent);
-	}
-	.social-links,
-	.social-links a {
-		display: flex;
-	}
-	@media (max-width: 720px) {
-		.social-links {
-			display: none;
-		}
-	}
-</style> -->

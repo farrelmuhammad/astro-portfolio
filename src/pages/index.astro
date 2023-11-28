@@ -12,12 +12,33 @@ import Projects from "../components/Projects.astro";
   <head>
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
   </head>
-  <body>
+  <body class="flex flex-col">
     <Header title={SITE_TITLE} />
     <main>
       <Hero />
       <Projects />
     </main>
     <Footer />
+    <script>
+      const mobileMenuToggle = document.getElementById(
+        "mobile-menu-toggle"
+      ) as HTMLElement | null;
+      const mobileMenu = document.getElementById(
+        "mobile-menu"
+      ) as HTMLElement | null;
+      const closeMobileMenu = document.getElementById(
+        "close-mobile-menu"
+      ) as HTMLElement | null;
+
+      if (mobileMenuToggle && mobileMenu) {
+        mobileMenuToggle.addEventListener("click", () => {
+          mobileMenu.classList.toggle("hidden");
+        });
+      }
+
+      closeMobileMenu.addEventListener("click", () => {
+        mobileMenu.classList.add("hidden");
+      });
+    </script>
   </body>
 </html>
