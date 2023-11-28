@@ -8,10 +8,12 @@ const posts = (await getCollection("blog")).sort(
 ---
 
 <section class="flex flex-col items-start justify-between gap-10 p-12">
-  <h2 class="text-3xl md:text-4xl lg:text-3xl font-semibold">Selected Projects</h2>
+  <h2 class="text-3xl md:text-4xl lg:text-3xl font-semibold">
+    Selected Projects
+  </h2>
   <ul class="grid grid-cols-1 md:grid-cols-2 gap-8 w-full">
     {
-      posts.map((post) => (
+      posts.slice(0, 4).map((post) => (
         <li class="flex flex-col">
           <a href={`/blog/${post.slug}/`} class="flex flex-col items-start">
             <img
