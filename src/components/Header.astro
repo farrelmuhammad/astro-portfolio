@@ -31,24 +31,23 @@ import { SITE_TITLE } from "../consts";
     <div id="mobile-menu" class="md:hidden fixed inset-0 bg-white z-50 hidden">
       <div class="flex flex-col items-center justify-center h-full">
         <button
-        id="close-mobile-menu"
-        class="absolute top-4 right-4 text-gray-700 hover:text-black focus:outline-none"
-      >
-        <!-- Icon Close -->
-        <svg
-          class="h-6 w-6"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
+          id="close-mobile-menu"
+          class="absolute top-4 right-4 text-gray-700 hover:text-black focus:outline-none"
         >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M6 18L18 6M6 6l12 12"
-          />
-        </svg>
-      </button>
+          <!-- Icon Close -->
+          <svg
+            class="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
         <HeaderLink
           href="/"
           class="text-lg font-semibold text-black hover:underline py-2"
@@ -78,15 +77,34 @@ import { SITE_TITLE } from "../consts";
     <!-- Desktop Menu -->
     <div class="hidden md:flex justify-items-center space-x-4">
       <HeaderLink href="/" class="nav-link hover:underline">Home</HeaderLink>
-      <HeaderLink href="/blog" class="nav-link hover:underline">
+      <HeaderLink
+        href="#"
+        data-tooltip="Coming Soon"
+        class="nav-link hover:underline group relative"
+      >
         Blog
+        <span
+          class="opacity-0 bg-gray-800 text-white text-xs rounded-lg py-1 px-2 absolute bottom-[-40px] left-1/2 transform -translate-x-1/2 transition duration-300 ease-in-out group-hover:opacity-100"
+        >
+          Coming Soon!
+        </span>
       </HeaderLink>
-      <HeaderLink href="/about" class="nav-link hover:underline">
+      <HeaderLink
+        href="#"
+        data-tooltip="Coming Soon"
+        class="nav-link hover:underline group relative"
+      >
         Projects
+        <span
+          class="opacity-0 bg-gray-800 text-white text-xs rounded-lg py-1 px-2 absolute bottom-[-40px] left-1/2 transform -translate-x-1/2 transition duration-300 ease-in-out group-hover:opacity-100"
+        >
+          Coming Soon!
+        </span>
       </HeaderLink>
     </div>
     <div class="hidden md:flex justify-items-end space-x-1">
-      <button
+      <a
+        href="mailto:farrelf11@gmail.com"
         class="bg-gray-900 hover:underline text-white text-lg font-light py-0 px-9 border border-gray-300 rounded-lg shadow-sm"
       >
         Say Hello!
